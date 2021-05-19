@@ -1,0 +1,4 @@
+.ashe {
+  height: 100vh; /*add this */
+  overflow-y: auto;
+}
