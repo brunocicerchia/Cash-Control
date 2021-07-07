@@ -12,7 +12,9 @@
   "dependencies": {
     "bootstrap": "^5.0.0",
     "electron": "^8.2.0",
+    "electron-pos-printer": "^1.2.4",
     "jquery": "^3.6.0",
-    "mongoose": "^5.9.7"
+    "mongoose": "^5.9.7",
+    "print-el": "^1.0.8"
   }
 }

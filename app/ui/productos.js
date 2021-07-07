@@ -2,10 +2,9 @@ const { ipcRenderer } = require("electron");
 
 const taskForm = document.querySelector("#taskForm");
 const taskName = document.querySelector("#taskName");
-const taskPrice = document.querySelector("#taskPrice")
-const taskCodebar = document.querySelector("#taskCodebar")
+const taskPrice = document.querySelector("#taskPrice");
+const taskCodebar = document.querySelector("#taskCodebar");
 const taskDescription = document.querySelector("#taskDescription");
-const taskTitle = document.querySelector("#productModalLabel")
 const taskList = document.querySelector("#taskList");
 
 let updateStatus = false;
@@ -90,6 +89,7 @@ ipcRenderer.on("new-task-created", (e, arg) => {
 ipcRenderer.on("get-tasks", (e, args) => {
   const receivedTasks = JSON.parse(args);
   tasks = receivedTasks;
+  console.log(tasks);
   renderTasks(tasks);
 });
 

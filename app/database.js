@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/electrondb', {
+mongoose.connect('mongodb://localhost/cashControl', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })

@@ -67,8 +67,6 @@
               <th>Descripcion</th>
               <th>Preico</th>
               <th>Codigo</th>
-              <th></th>
-              <th></th>
             </tr>
           </thead>
           <tbody id="taskList">
@@ -98,13 +96,13 @@
           </form>
         </div>
         <div class="buscadorProductos mt-2">
-          <h5 id="tituloAgregar">Buscar Producto</h5>
-          <form id="taskForm" class="card">
+          <h5>Buscar Producto</h5>
+          <form id="searchForm" class="card">
             <div class="form-group mb-3">
-              <input class="form-control" id="taskName" placeholder="Buscar por nombre" autofocus>
+              <input class="form-control" id="searchInput" placeholder="Buscar por nombre" autofocus>
             </div>
             <div class="btn-group" role="group">
-              <button type="submit" class="btn btn-primary">Buscar</button>
+              <button type="submit" class="btn btn-primary" id="searchButton">Buscar</button>
             </div>
           </form>
         </div>
