@@ -116,3 +116,4 @@ ipcRenderer.on("update-task-success", (e, args) => {
   });
   renderTasks(tasks);
 });
+
