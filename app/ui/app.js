@@ -81,7 +81,7 @@ ipcRenderer.on('product-searched', (e, arg) => {
   cuentaTotal = cuentaTotal + priceResult;
   precioFinal = cuentaTotal;
   precioProducto.innerHTML = `
-    <h3>Precio Total: $${cuentaTotal}</h3>
+    ${cuentaTotal}
   `;
 })
 
@@ -176,12 +176,11 @@ function cobrar() {
     });
   }
 
-  // Necesito convertir los productos en un array
-
   const jornada = {
     ventas: ventas,
     horario: new Date(),
-    caja: 1
+    caja: 1,
+    total: document.querySelector("#precioTotal").innerText
   };
 
   if (!updateStatus) {

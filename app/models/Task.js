@@ -17,6 +17,10 @@ const newTaskSchema = new Schema({
     type: String,
     required: true
   },
+  stock: {
+    type: String,
+    required: true
+  }
 })
 
 module.exports = model('Task', newTaskSchema);

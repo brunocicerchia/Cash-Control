@@ -6,13 +6,17 @@ const newJornadaSchema = new Schema({
     required: true
   },
   horario: {
-    type: String,
+    type: Date,
     required: true
   },
   caja: {
     type: String,
     required: true
   },
+  total: {
+    type: String,
+    required: true
+  }
 })
 
 module.exports = model('Jornada', newJornadaSchema);

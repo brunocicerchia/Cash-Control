@@ -3,7 +3,6 @@ const { ipcRenderer } = require("electron");
 const taskForm = document.querySelector("#taskForm");
 const taskName = document.querySelector("#taskName");
 const taskPrice = document.querySelector("#taskPrice");
-const taskStock = document.querySelector("#taskStock");
 const taskCodebar = document.querySelector("#taskCodebar");
 const taskDescription = document.querySelector("#taskDescription");
 const taskList = document.querySelector("#taskList");
@@ -25,7 +24,6 @@ function deleteTask(id) {
     const task = tasks.find(task => task._id === id);
     taskName.value = task.name;
     taskDescription.value = task.description;
-    taskStock.value = task.stock;
     taskPrice.value = task.price;
     taskCodebar.value = task.codebar;
   }
@@ -35,10 +33,9 @@ function deleteTask(id) {
     tasks.map(t => {
       taskList.innerHTML += `
       <tr>
-        <td>${t.name}</td>
-        <td>${t.description}</td>
-        <td>$${t.price}</td>
-        <td>${t.codebar}</td>
+      <td>${t.name}</td>
+      <td>$${t.price}</td>
+      <td>${t.stock}</td>
       <td>
         <button class="btn btn-secondary" onclick="editTask('${t._id}'); document.getElementById('tituloAgregar').innerText = 'Editar Producto'" data-bs-toggle="modal" data-bs-target="#productModal">
           Editar
@@ -65,7 +62,6 @@ taskForm.addEventListener("submit", async e => {
     name: taskName.value,
     description: taskDescription.value,
     price: taskPrice.value,
-    stock: taskStock.value,
     codebar: taskCodebar.value
   };
 
@@ -113,7 +109,6 @@ ipcRenderer.on("update-task-success", (e, args) => {
       t.name = updatedTask.name;
       t.description = updatedTask.description;
       t.price = updatedTask.price;
-      t.stock = updatedTask.stock;
       t.codebar = updatedTask.codebar;
     }
     return t;

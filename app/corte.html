@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 </head>
-
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,10 +25,10 @@
               <a class="nav-link active" aria-current="page" href="#"><h5><i class="bi bi-trash"></i> Creditos</h5></a>
             </li>
             <li class="nav-item card">
-              <a class="nav-link active" aria-current="page" href="#"><h5><i class="bi bi-box-seam"></i> Productos</h5></a>
+              <a class="nav-link active" aria-current="page" href="productos.html"><h5><i class="bi bi-box-seam"></i> Productos</h5></a>
             </li>
             <li class="nav-item card">
-              <a class="nav-link active" aria-current="page" href="#"><h5><i class="bi bi-archive"></i> Inventario</h5></a>
+              <a class="nav-link active" aria-current="page" href="inventario.html"><h5><i class="bi bi-archive"></i> Inventario</h5></a>
             </li>
             <li class="nav-item card">
               <a class="nav-link active" aria-current="page" href="#"><h5><i class="bi bi-person-circle"></i> Clientes</h5></a>
@@ -70,42 +69,14 @@
             </tr>
           </thead>
           <tbody id="jornadaList">
+            <td>
+              <ul id="ventas"></ul>
+            </td>
+            <td>${dateFormat}</td>
+            <td>${t.caja}</td>
+            <td id="recaudacion"></td>
           </tbody>
         </table>
-      </div>
-      <div class="col-md-4">
-        <div class="formularioProducto">
-          <h5 id="tituloAgregar">Agregar Producto</h5>
-          <form id="jornadaForm" class="card">
-            <div class="form-group mb-3">
-              <input class="form-control" id="jornadaFecha" placeholder="Fecha" autofocus>
-            </div>
-            <div class="form-group mb-3">
-              <input class="form-control" id="jornadaVentas" placeholder="Ventas" autofocus>
-            </div>
-            <div class="form-group mb-3">
-              <input class="form-control" id="jornadaHorario" placeholder="Horario" autofocus>
-            </div>
-            <div class="form-group mb-3">
-              <input class="form-control" id="jornadaCaja" placeholder="Caja" autofocus>
-            </div>
-            <div class="btn-group" role="group">
-              <button type="submit" class="btn btn-primary">Guardar</button>
-              <button type="reset" class="btn btn-outline-primary">Borrar</button>
-            </div>
-          </form>
-        </div>
-        <div class="buscadorProductos mt-2">
-          <h5>Buscar Producto</h5>
-          <form id="searchForm" class="card">
-            <div class="form-group mb-3">
-              <input class="form-control" id="searchInput" placeholder="Buscar por nombre" autofocus>
-            </div>
-            <div class="btn-group" role="group">
-              <button type="submit" class="btn btn-primary" id="searchButton">Buscar</button>
-            </div>
-          </form>
-        </div>
       </div>
     </div>
   </div>

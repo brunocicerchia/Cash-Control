@@ -40,7 +40,7 @@ ipcMain.on("update-task", async (e, args) => {
   console.log(args);
   const updatedTask = await Task.findByIdAndUpdate(
     args.idTaskToUpdate,
-    { name: args.name, description: args.description, price: args.price, fecha: args.fecha },
+    { name: args.name, description: args.description, price: args.price, fecha: args.fecha, stock: args.stock },
     { new: true }
   );
   e.reply("update-task-success", JSON.stringify(updatedTask));
